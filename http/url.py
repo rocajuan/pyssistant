@@ -1,8 +1,8 @@
 import requests
 import urllib2
 
-# Url class that breaks down the desired url and has an options for 
-# certain actions.
+# Url class that breaks down the desired url.  
+# It can verify the url is active and will return the response code.
 class Url(object):
 	def __init__(self, url, action=None):
 		self.protocol = url.split("://")[0] if "http" in url[:4] else "http"
